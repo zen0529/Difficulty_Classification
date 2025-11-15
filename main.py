@@ -23,11 +23,11 @@ def download_nltk_data():
     try:
         nltk.data.find('corpora/stopwords')
         nltk.data.find('corpora/wordnet')
-        nltk.data.find('tokenizers/punkt')
+        nltk.data.find('tokenizers/punkt_tab')
     except LookupError:
         nltk.download('stopwords', quiet=True)
         nltk.download('wordnet', quiet=True)
-        nltk.download('punkt', quiet=True)
+        nltk.download('punkt_tab', quiet=True)
         nltk.download('omw-1.4', quiet=True)
 
 download_nltk_data()
